@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ZH-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sony's Resume</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S"
+        crossorigin="anonymous">
+
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: Microsoft JhengHei;
+            color: #4D4D4D;
+            line-height: 35px;
+        }
+
+        .topbox {
+            padding: 10% 10%;
+            background-image: url("top.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+        }
+
+        .pix_text {
+            height: 80%;
+            background-color: #ffffffa9;
+            /* border-radius: 2%; */
+        }
+
+        .pix_text p {
+            display: block;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-weight: bold;
+            color: black;
+            font-size: 50px;
+        }
+
+        #small {
+            font-size: 25px;
+            position: relative;
+            left: 80%;
+        }
+
+        .top {
+            display: block;
+            width: 100%;
+        }
+
+        .container {
+            max-width: 90%;
+            margin: 10px auto;
+            border: 1px solid rgb(211, 211, 211);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            background: rgb(234, 228, 228);
+            border-radius: 2px;
+            position: relative;
+            border-radius: 1%;
+
+        }
+
+        .header {
+            height: 100vh;
+            position: relative;
+        }
+
+        .picbox {
+            width: 50%;
+            height: 620px;
+            float: left;
+        }
+
+        .introbox {
+            float: left;
+            width: 50%;
+            height: 620px;
+            padding: 30px;
+            padding-top: 80px;
+        }
+
+        .pic {
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            display: block;
+            position: relative;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        a {
+            text-decoration: none;
+
+        }
+
+        .b1link {
+            display: inline-flex;
+            background-color: rgba(232, 53, 86, 1);
+            transition: border 0.4s ease 0s, background-color 0.4s ease 0s;
+            border: solid rgba(232, 53, 86, 1) 0px;
+            border-radius: 50%;
+            height: 130px;
+            width: 130px;
+        }
+
+        .span {
+            margin: auto;
+        }
+
+        .b1link:hover {
+            opacity: 0.9;
+        }
+
+        .b2link {
+            display: inline-flex;
+            background-color: rgba(97, 208, 212, 1);
+            transition: border 0.4s ease 0s, background-color 0.4s ease 0s;
+            border: solid rgba(97, 208, 212, 1) 0px;
+            border-radius: 50%;
+            height: 130px;
+            width: 130px;
+        }
+
+        .b2link:hover {
+            opacity: 0.8;
+        }
+
+        .b3link {
+            display: inline-flex;
+            background-color: rgba(209, 201, 38, 1);
+            transition: border 0.4s ease 0s, background-color 0.4s ease 0s;
+            border: solid rgba(209, 201, 38, 1) 1px;
+            border-radius: 50%;
+            height: 130px;
+            width: 130px;
+        }
+
+        .b3link:hover {
+            opacity: 0.8;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        .pad {
+            padding: 30px 70px;
+
+        }
+
+        .ind {
+            text-indent: 33px;
+        }
+
+        .textFont {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .Education {
+            border-bottom: 5px solid rgba(232, 53, 86, 1);
+            font-size: 30px;
+        }
+
+        .Experience {
+            border-bottom: 5px solid rgba(97, 208, 212, 1);
+            font-size: 30px;
+        }
+
+        .About {
+            border-bottom: 5px solid rgba(209, 201, 38, 1);
+            font-size: 30px;
+        }
+
+        .Edu {
+            background-color: rgba(232, 53, 86, 0.5);
+            margin-top: 20px;
+            height: 100vh;
+
+        }
+
+        .Exp {
+            background-color: rgba(97, 208, 212, 0.5);
+            height: 100vh;
+
+        }
+
+        .Abou {
+            background-color: rgba(209, 201, 38, 0.5);
+            height: 100vh;
+        }
+
+        #word:hover {
+            opacity: 0.8;
+        }
+
+        #blog:hover {
+            color: black;
+        }
+
+        .topic {
+            font-weight: bold;
+            color: black;
+        }
+
+        .circle {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .header:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        @media screen and (max-width:800px) {
+            .b1link,
+            .b2link,
+            .b3link {
+                width: 120px;
+                height: 120px;
+            }
+        }
+
+        @media screen and (max-width:760px) {
+            .b1link,
+            .b2link,
+            .b3link {
+                width: 110px;
+                height: 110px;
+            }
+        }
+
+        @media screen and (max-width:740px) {
+            .introbox,
+            .picbox {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width:440px) {
+            .b1link,
+            .b2link,
+            .b3link {
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        .mcu {
+            width: 80%;
+            padding-top: 15px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topbox">
+
+        <div class="pix_text">
+            <P>聰明是一種天賦，而善良是一種選擇</P>
+            <p id="small">Jeff Bezos, Amazon CEO</p>
+        </div>
+
+    </div>
+    <div class="container">
+
+        <div class="header">
+            <div class="picbox">
+                <img class="pic" src="photo.jpg" alt="PIC" title="SONY ZHENG">
+            </div>
+            <div class="introbox">
+                <span class="textFont">Hello,</span>
+                <br>
+                <span class="textFont">我是鄭經叡 Jing-Rui Zheng</span>
+                <h4>這有些關於我的資訊...</h4>
+                <div class="circle">
+                    <a href="#Edu" class="b1link">
+                        <span class="span" style="color: white;">Education</span>
+                    </a>
+                    <a href="#Exp" class="b2link">
+                        <span class="span" style="color: white;">Experience</span>
+                    </a>
+                    <a href="#About" class="b3link">
+                        <span class="span" style="color: white;">About Me</span>
+                    </a>
+                </div>
+
+                <P>來自於好山、好水、好空氣的花蓮</P>
+                <p>冷靜、細心、樂於分享</p>
+                <p>未來努力朝向軟體工程師發展</p>
+
+                </a>
+                <table>
+                    <tr>
+                        <td>
+                            <a href="https://sony2023264502568.wordpress.com/" target="_blank">
+                                <i id="word" class="fab fa-wordpress-simple fa-2x"></i>
+                        </td>
+                        <td>
+                            <a id="blog" href="https://sony2023264502568.wordpress.com/" target="_blank">&nbsp;&nbsp;技術部落格</a>
+                            <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i class="far fa-envelope fa-2x"></i>
+                        </td>
+                        <td>
+                            <span>&nbsp;&nbsp;sony2023@gmail.com</span>
+                        </td>
+                    </tr>
+                </table>
+
+
+
+            </div>
+        </div>
+        <div class="pad Edu">
+
+            <div class="Education textFont">Education</div>
+            <table>
+                <tr>
+                    <td style="width:20%;">
+                        <img class="mcu" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Ming_Chuan_University_LOGO.svg/2000px-Ming_Chuan_University_LOGO.svg.png"
+                            alt="MCU">
+                    </td>
+                    <td style="width:80%;">
+                        <span>
+                            <p>電腦與通訊工程學所 | 2015.09-Now</p>
+                            <p>電腦與通訊工程學系 | 2010.09-2015.06</p>
+                        </span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="pad Exp">
+            <div class="Experience textFont">Experience</div>
+
+
+            
+            <p class="topic">CMoney 菁英軟體工程師戰鬥營</p>
+            <ul>
+                <li>學員 | 2018.02.28-2018.08.17</li>
+            </ul>
+            <p class="topic">虹宴餐飲集團</p>
+            <ul>
+                <li>物流專員 | 2017.05-2017.11</li>
+            </ul>
+            <p class="topic">銘傳大學前規處資源教室</p>
+            <ul>
+                <li>行政工讀生 | 2010.09-2017.12</li>
+                <li>TQC課輔老師 | 2015.09-2017.12</li>
+            </ul>
+            <p class="topic">豐其股份有限公司</p>
+            <ul>
+                <li>音響技術工程師 | 2014.07-2014.09</li>
+            </ul>
+        </div>
+
+        <div class="pad Abou">
+            <div class="About textFont">關於我</div>
+            <p class="ind">
+                大學期間對撰寫程式沒有太大興趣，直到因經濟因素，進入職場數個月後，才發現原來寫程式的渴望一直埋藏在心底
+                非常幸運地，戰鬥營的廣告就這麼掉到我腿上，經過一連串的面試與考核後成功的錄取，目前正在戰鬥營中努力練功!</p>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+</body>
+
+</html>
